@@ -2,24 +2,22 @@ package mobi.robotic.jenkinstestandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class SayfaIki extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sayfa_iki);
 
-        findViewById(R.id.btBir).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnIki).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SayfaIki.class);
-                startActivity(intent);
+                Toast.makeText(SayfaIki.this, "Sayfa Iki", Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 }
